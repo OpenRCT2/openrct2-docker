@@ -17,7 +17,7 @@ RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.
 FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get install --no-install-recommends -y rsync ca-certificates libjansson4 libpng16-16 libzip4 libcurl4 libfreetype6 libfontconfig1
+RUN apt-get install --no-install-recommends -y rsync ca-certificates libjansson4 libpng16-16 libzip4 libcurl4 libfreetype6 libfontconfig1 libicu60
 
 # Install OpenRCT2
 COPY --from=build-env /openrct2-install /openrct2-install
