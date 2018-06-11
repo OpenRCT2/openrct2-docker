@@ -31,5 +31,7 @@ It will then host a new server and load the saved game `mypark.sv6` located in t
 
 Currently all tags are based on Ubuntu 18.04 (amd64).
 
-- [`0.1.2`, `latest` (*0.1.2/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.1.2/cli/Dockerfile)
 - [`develop` (*develop/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/develop/cli/Dockerfile)
+- [`0.2.0`, `latest` (*0.2.0/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.2.0/cli/Dockerfile)
+- [`0.1.2` (*0.1.2/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.1.2/cli/Dockerfile)
+
