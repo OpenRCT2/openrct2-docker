@@ -7,7 +7,7 @@ RUN apt-get update \
  && ln -s /usr/bin/clang-10 /usr/bin/clang \
  && ln -s /usr/bin/clang++-10 /usr/bin/clang++
 
-ENV OPENRCT2_REF develop
+ENV OPENRCT2_REF v0.3.0
 WORKDIR /openrct2
 RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.com/OpenRCT2/OpenRCT2 . \
  && mkdir build \
