@@ -12,8 +12,9 @@ WORKDIR /openrct2
 RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.com/OpenRCT2/OpenRCT2 . \
  && mkdir build \
  && cd build \
- && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/openrct2-install/usr -DCMAKE_INSTALL_LIBDIR=/openrct2-install/usr/lib \
- && ninja -k0 install
+ && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/openrct2-install/usr \
+ && ninja -k0 install \
+ && rm /openrct2-install/usr/lib/libopenrct2.a
 
 # Build runtime image
 FROM ubuntu:20.04
