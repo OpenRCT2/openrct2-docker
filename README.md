@@ -33,6 +33,7 @@ v0.2.5 onwards are based on Ubuntu 20.04 (amd64). v0.2.4 and v0.2.3 use Ubuntu 1
 
 - [`develop` (*develop/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/develop/cli/Dockerfile)
 - [`0.3.4.1`, `latest` (*0.3.4.1/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.3.4.1/cli/Dockerfile)
+- [`0.3.4` (*0.3.4/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.3.4/cli/Dockerfile)
 - [`0.3.3` (*0.3.3/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.3.3/cli/Dockerfile)
 - [`0.3.2` (*0.3.2/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.3.2/cli/Dockerfile)
 - [`0.3.1` (*0.3.1/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.3.1/cli/Dockerfile)
