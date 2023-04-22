@@ -2,7 +2,7 @@
 FROM ubuntu:20.04 AS build-env
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
- && apt-get install --no-install-recommends -y git cmake pkg-config ninja-build clang-10 libsdl2-dev libspeexdsp-dev nlohmann-json3-dev libcurl4-openssl-dev libcrypto++-dev libfontconfig1-dev libfreetype6-dev libpng-dev libzip-dev libssl-dev libicu-dev libflac-dev libvorbis-dev \
+ && apt-get install --no-install-recommends -y git cmake pkg-config ninja-build clang-10 nlohmann-json3-dev libcurl4-openssl-dev libcrypto++-dev libfontconfig1-dev libfreetype6-dev libpng-dev libzip-dev libssl-dev libicu-dev libflac-dev libvorbis-dev \
  && rm -rf /var/lib/apt/lists/* \
  && ln -s /usr/bin/clang-10 /usr/bin/clang \
  && ln -s /usr/bin/clang++-10 /usr/bin/clang++
@@ -12,9 +12,12 @@ WORKDIR /openrct2
 RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.com/OpenRCT2/OpenRCT2 . \
  && mkdir build \
  && cd build \
- && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/openrct2-install/usr \
+ && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/openrct2-install/usr -DDISABLE_GUI=ON \
  && ninja -k0 install \
- && rm /openrct2-install/usr/lib/libopenrct2.a
+ && rm /openrct2-install/usr/lib/libopenrct2.a \
+ # HACK due to issue in cmakelists, move content from cli
+ && mv /openrct2-install/usr/share/openrct2-cli/* /openrct2-install/usr/share/openrct2 \
+ && rm -rf /openrct2-install/usr/share/openrct2-cli
 
 # Build runtime image
 FROM ubuntu:20.04
