@@ -32,7 +32,16 @@ It will then host a new server and load the saved game `mypark.sv6` located in t
 v0.2.5 onwards are based on Ubuntu 20.04 (amd64). v0.2.4 and v0.2.3 use Ubuntu 19.04 (amd64), previous tags are based on Ubuntu 18.04 (amd64).
 
 - [`develop` (*develop/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/develop/cli/Dockerfile)
-- [`0.4.4`, `latest` (*0.4.4/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.4/cli/Dockerfile)
+- [`0.4.13`, `latest` (*0.4.13/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.13/cli/Dockerfile)
+- [`0.4.12`, (*0.4.12/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.12/cli/Dockerfile)
+- [`0.4.11`, (*0.4.11/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.11/cli/Dockerfile)
+- [`0.4.10`, (*0.4.10/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.10/cli/Dockerfile)
+- [`0.4.9`, (*0.4.9/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.9/cli/Dockerfile)
+- [`0.4.8`, (*0.4.8/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.8/cli/Dockerfile)
+- [`0.4.7`, (*0.4.7/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.7/cli/Dockerfile)
+- [`0.4.6`, (*0.4.6/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.6/cli/Dockerfile)
+- [`0.4.5`, (*0.4.5/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.5/cli/Dockerfile)
+- [`0.4.4`, (*0.4.4/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.4/cli/Dockerfile)
 - [`0.4.3`, (*0.4.3/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.3/cli/Dockerfile)
 - [`0.4.2` (*0.4.2/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.2/cli/Dockerfile)
 - [`0.4.1` (*0.4.1/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.1/cli/Dockerfile)
