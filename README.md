@@ -17,7 +17,7 @@ To host a multiplayer server, create a container that exposes the desired port a
 $ docker run --rm -p 11753:11753 -it openrct2/openrct2-cli host https://bit.do/openrct2-bpb
 ```
 
-All configuraion data is stored inside the container. If you want to persit it outside the container, you can mount it to a volume or your local filesystem. Mounting your local filesystem also allows you to read and write saved games locally. For example:
+All configuration data is stored inside the container. If you want to persit it outside the container, you can mount it to a volume or your local filesystem. Mounting your local filesystem also allows you to read and write saved games locally. For example:
 
 ```
 $ docker run --rm -p 11753:11753 -v /home/me/openrct2-config:/home/openrct2/.config/OpenRCT2 -it openrct2/openrct2-cli host /home/openrct2/.config/OpenRCT2/save/mypark.sv6
