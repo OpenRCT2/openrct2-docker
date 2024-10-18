@@ -1,11 +1,9 @@
 # Build OpenRCT2
-FROM ubuntu:22.04 AS build-env
+FROM ubuntu:24.04 AS build-env
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
- && apt-get install --no-install-recommends -y git cmake pkg-config ninja-build clang-14 nlohmann-json3-dev libcurl4-openssl-dev libcrypto++-dev libfontconfig1-dev libfreetype6-dev libpng-dev libzip-dev libssl-dev libicu-dev libflac-dev libvorbis-dev \
- && rm -rf /var/lib/apt/lists/* \
- && ln -s /usr/bin/clang-14 /usr/bin/clang \
- && ln -s /usr/bin/clang++-14 /usr/bin/clang++
+ && apt-get install --no-install-recommends -y git cmake pkg-config ninja-build clang nlohmann-json3-dev libcurl4-openssl-dev libcrypto++-dev libfontconfig1-dev libfreetype6-dev libpng-dev libzip-dev libssl-dev libicu-dev libflac-dev libvorbis-dev \
+ && rm -rf /var/lib/apt/lists/*
 
 ARG OPENRCT2_REF=develop
 WORKDIR /openrct2
@@ -20,11 +18,11 @@ RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.
  && rm -rf /openrct2-install/usr/share/openrct2-cli
 
 # Build runtime image
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 # Install OpenRCT2
 COPY --from=build-env /openrct2-install /openrct2-install
 RUN apt-get update \
- && apt-get install --no-install-recommends -y rsync ca-certificates libpng16-16 libzip4 libcurl4 libfreetype6 libfontconfig1 libicu70 \
+ && apt-get install --no-install-recommends -y rsync ca-certificates libpng16-16 libzip4 libcurl4 libfreetype6 libfontconfig1 libicu74 \
  && rm -rf /var/lib/apt/lists/* \
  && rsync -a /openrct2-install/* / \
  && rm -rf /openrct2-install \
