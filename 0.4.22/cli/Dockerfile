@@ -12,10 +12,7 @@ RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.
  && cd build \
  && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/openrct2-install/usr -DDISABLE_GUI=ON -DENABLE_HEADERS_CHECK=OFF \
  && ninja -k0 install \
- && rm /openrct2-install/usr/lib/libopenrct2.a \
- # HACK due to issue in cmakelists, move content from cli
- && mv /openrct2-install/usr/share/openrct2-cli/* /openrct2-install/usr/share/openrct2 \
- && rm -rf /openrct2-install/usr/share/openrct2-cli
+ && rm /openrct2-install/usr/lib/libopenrct2.a
 
 # Build runtime image
 FROM ubuntu:24.04
