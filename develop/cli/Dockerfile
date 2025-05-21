@@ -11,7 +11,8 @@ RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.
  && mkdir build \
  && cd build \
  && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/openrct2-install/usr -DDISABLE_GUI=ON -DENABLE_HEADERS_CHECK=OFF \
- && ninja -k0 graphics install \
+ && ninja -k0 graphics \
+ && ninja -k0 install \
  && rm /openrct2-install/usr/lib/libopenrct2.a
 
 # Build runtime image
