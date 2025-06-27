@@ -17,7 +17,7 @@ To host a multiplayer server, create a container that exposes the desired port a
 $ docker run --rm -p 11753:11753 -it openrct2/openrct2-cli host https://bit.do/openrct2-bpb
 ```
 
-All configuration data is stored inside the container. If you want to persit it outside the container, you can mount it to a volume or your local filesystem. Mounting your local filesystem also allows you to read and write saved games locally. For example:
+All configuration data is stored inside the container. If you want to persist it outside the container, you can mount it to a volume or your local filesystem. Mounting your local filesystem also allows you to read and write saved games locally. For example:
 
 ```
 $ docker run --rm -p 11753:11753 -v /home/me/openrct2-config:/home/openrct2/.config/OpenRCT2 -it openrct2/openrct2-cli host /home/openrct2/.config/OpenRCT2/save/mypark.sv6
@@ -25,14 +25,25 @@ $ docker run --rm -p 11753:11753 -v /home/me/openrct2-config:/home/openrct2/.con
 
 The command above will mount the OpenRCT2 user / config directory inside the container to a directory on your local filesystem. This will allow you to persist and edit the configuration, saved games etc. locally.
 
-It will then host a new server and load the saved game `mypark.sv6` located in the mounted directory under the save sub-directory.
+It will then host a new server and load the saved game `mypark.sv6` located in the mounted directory under the save subdirectory.
 
 ## Tags
 
-v0.2.5 onwards are based on Ubuntu 20.04 (amd64). v0.2.4 and v0.2.3 use Ubuntu 19.04 (amd64), previous tags are based on Ubuntu 18.04 (amd64).
+
+| Tag version       | Ubuntu version |
+|-------------------|----------------|
+| v0.4.16+          | Ubuntu 24.04   |
+| v0.4.11 - v0.4.15 | Ubuntu 22.04   |
+| v0.2.5 - v0.4.10  | Ubuntu 20.04   |
+| v0.2.3 - v0.2.4   | Ubuntu 19.04   |
+| v0.1.2 - v0.2.2   | Ubuntu 18.04   |
+
+All builds use the `amd64` architecture.
 
 - [`develop` (*develop/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/develop/cli/Dockerfile)
-- [`0.4.21`, `latest` (*0.4.21/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.21/cli/Dockerfile)
+- [`0.4.23`, `latest` (*0.4.23/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.21/cli/Dockerfile)
+- [`0.4.22`, (*0.4.22/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.21/cli/Dockerfile)
+- [`0.4.21`, (*0.4.21/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.21/cli/Dockerfile)
 - [`0.4.20`, (*0.4.20/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.20/cli/Dockerfile)
 - [`0.4.19.1` (*0.4.19.1/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.19.1/cli/Dockerfile)
 - [`0.4.19`, (*0.4.19/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.19/cli/Dockerfile)
