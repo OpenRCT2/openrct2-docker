@@ -5,7 +5,7 @@ RUN apt-get update \
  && apt-get install --no-install-recommends -y git cmake pkg-config ninja-build clang nlohmann-json3-dev libcurl4-openssl-dev libcrypto++-dev libfontconfig1-dev libfreetype6-dev libpng-dev libzip-dev libssl-dev libicu-dev libflac-dev libvorbis-dev \
  && rm -rf /var/lib/apt/lists/*
 
-ARG OPENRCT2_REF=v0.4.23
+ARG OPENRCT2_REF=v0.4.25
 WORKDIR /openrct2
 RUN git -c http.sslVerify=false clone --depth 1 -b $OPENRCT2_REF https://github.com/OpenRCT2/OpenRCT2 . \
  && mkdir build \
