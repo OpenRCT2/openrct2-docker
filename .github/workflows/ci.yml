@@ -11,11 +11,11 @@ jobs:
       fail-fast: false
       matrix:
         # List of tags to build and upload, remember to update this
-        tag: [0.4.25]
+        tag: [0.4.26]
     env:
       dockertag: ${{ matrix.tag }}
       dockerimg: openrct2/openrct2-cli
-      dockerlst: 0.4.25
+      dockerlst: 0.4.26
     steps:
       - name: Checkout
         uses: actions/checkout@v4
