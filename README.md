@@ -41,8 +41,9 @@ It will then host a new server and load the saved game `mypark.sv6` located in t
 All builds use the `amd64` architecture.
 
 - [`develop` (*develop/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/develop/cli/Dockerfile)
-- [`0.4.26`, `latest` (*0.4.26/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.26/cli/Dockerfile)
-- [`0.4.25`, `latest` (*0.4.25/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.25/cli/Dockerfile)
+- [`0.4.27`, `latest` (*0.4.27/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.27/cli/Dockerfile)
+- [`0.4.26`, (*0.4.26/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.26/cli/Dockerfile)
+- [`0.4.25`, (*0.4.25/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.25/cli/Dockerfile)
 - [`0.4.24`, (*0.4.24/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.24/cli/Dockerfile)
 - [`0.4.23`, (*0.4.23/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.23/cli/Dockerfile)
 - [`0.4.22`, (*0.4.22/cli/Dockerfile*)](https://github.com/OpenRCT2/openrct2-docker/blob/master/0.4.22/cli/Dockerfile)
